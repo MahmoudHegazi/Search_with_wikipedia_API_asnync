@@ -26,7 +26,7 @@
 6. also there is method to print myPages and ids to <ul> (Not Good for undefined search results numbers).  
 
 
-##app(Result):
+## app(Result):
 ### take inputs or search topic from user and print the result using wikipedia_API
 
 ##screenshoot:
