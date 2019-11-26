@@ -27,7 +27,8 @@
 
 
 ## app(Result):
-# take inputs or search topic from user and print the result using wikipedia_API and pageid
+1. take inputs or search topic from user.
+2. print the result using wikipedia_API and pageid.
 
 ## screenshoot:
 <img src='img.JPG' alt='project photo' style='border:2px solid black;'>
