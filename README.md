@@ -1,5 +1,4 @@
-# App name:
-## small Search Engine
+## App name: small Search Engine
 
 ## Search_with_wikipedia_API_asnync
 (my First applactin use wikipedia API)
@@ -29,5 +28,5 @@
 ## app(Result):
 ### take inputs or search topic from user and print the result using wikipedia_API
 
-##screenshoot:
+## screenshoot:
 <img src='img.JPG' alt='project photo' style='border:2px solid black;'>
