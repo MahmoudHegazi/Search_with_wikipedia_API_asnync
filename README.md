@@ -30,4 +30,4 @@
 ### take inputs or search topic from user and print the result using wikipedia_API
 
 ##screenshoot:
-<src='img.JPG' alt='project photo' style='border:2px solid black;'>
+<img src='img.JPG' alt='project photo' style='border:2px solid black;'>
