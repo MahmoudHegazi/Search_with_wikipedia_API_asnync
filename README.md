@@ -15,7 +15,7 @@
 4. AJAX technique (connect asynchronously with wikipedia server)(no need reload page).
 5. wikipedia_API (var url in code).
 
-##about:
+## about:
 1. this application connect to wikipedia server asynchronously no need to reload (FaceBook Style).
 2. it has search input and search button.
 3. click on search button will execute function loadDoc and create new XMLHttpRequest().
