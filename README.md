@@ -2,7 +2,7 @@
 #### Small Search Engine
 
 ## Search_with_wikipedia_API_asnync
-(my First applactin use wikipedia API)
+(my First applactin using wikipedia API)
 
 ## What I need To Run the code and see result?:
 *. You need only web browser all thing ready.
