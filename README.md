@@ -5,8 +5,8 @@
 (my First applactin using wikipedia API)
 
 ## What I need To Run the code and see result?:
-*. You need only web browser all thing ready.
-*. I added HTML, CSS and Javascript codes togther to make it easy run on browsers without any edits.
+.* You need only web browser all thing ready.
+.* I added HTML, CSS and Javascript codes togther to make it easy run on browsers without any edits.
 
 ## project components:
 1. HTML (Create Page).
