@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, td, th {
+  border : 1px solid gold;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 5px;
+}
+</style>
+</head>
+<body onload='loadDoc()'>
+<ul class='items'>
+<li class='item'></li>
+
+<li class='item'></li>
+<li class='item'></li>
+<li class='item'></li>
+<li class='item'></li>
+<li class='item'></li>
+<li class='item'></li>
+
+</ul>
+
+<input id='topic' value='' placeholder='search'>
+<button type="button" onclick="loadDoc()">Search</button>
+
+<table id='table'></table
+<div id="demo22">
+<h2>The XMLHttpRequest Object</h2>
+<button type="button" onclick="changeStyle()">Change Style</button>
+
+</div>
+
+<script>
+
+
+
+function loadDoc() {
+
+//Create a new object to interact with the server
+var xhr = new XMLHttpRequest();
+myInput = document.getElementById("topic");
+var url = "https://en.wikipedia.org/w/api.php?action=query&origin=*&format=json&generator=search&gsrnamespace=0&gsrlimit=5&gsrsearch=" + myInput.value ;
+
+
+// Provide 3 arguments (GET/POST, The URL, Async True/False)
+xhr.open('GET', url, true);
+ 
+// Once request has loaded...
+xhr.onload = function() {
+    // Parse the request into JSON
+    var data = JSON.parse(this.response);
+    
+
+
+   
+     
+    // Loop through the data object
+    // Pulling out the titles of each page
+    
+    
+    myPages = []
+    ids = []
+    var wikipedia_pages = data.query.pages;
+    
+    //this for table
+   
+     for (var i in wikipedia_pages) { 
+      myPages.push(wikipedia_pages[i].title);
+      
+      ids.push(wikipedia_pages[i].pageid);
+     }
+
+
+  //access the list or ul first child node
+  var list = document.getElementsByClassName("items")[0];  
+  
+   var table="<tr><th>Artist</th><th>index</th></tr>";
+   
+   for (var n = 0; n < myPages.length; n++) {
+   
+   //  loop thro array myPages and print each page in li
+   var fullUrl = 'https://en.wikipedia.org/wiki/' + myPages[n];
+  list.getElementsByClassName("item")[n].innerHTML += '<a href="' + 
+  fullUrl + '">' + myPages[n] + '</a>';
+ 
+ // better for undefined number will loop throgh the items and print as it has items
+  table += '<tr><td>' +
+  myPages[n] + 
+  '</td><td>' +
+  ids[n] +
+  '</td></tr>';
+  }
+  document.getElementById('table').innerHTML = table;
+
+  
+
+   
+        
+}
+// Send request to the server asynchronously
+xhr.send();
+
+  
+  };
+
+  
+function changeStyle() {
+ var getTable = document.getElementById('table');
+
+ getTable.style.background = 'black';
+ getTable.style.color = 'white';
+ getTable.style.border = '2px solid white';
+
+ 
+}
+</script>
+
+</body>
+</html>
